@@ -1,6 +1,9 @@
 const  Router=require("express");
 const router =Router();
+const { signup,login } = require("../controller/AuthController");
 
+router.post('/signup',signup);
+router.post('/login',login);
 
 
 router.post('/test',async (req,res)=>{

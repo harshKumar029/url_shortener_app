@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const User = require('../models/userSchema');
+const User = require('../model/User_model');
 const config = require('config');
 const secret_key = config.get("secret_key");
 
@@ -19,7 +19,7 @@ const signup = async (req, res) => {
     const newUser = new User({ name, email, password: hashedPassword });
     await newUser.save();
 
-    res.status(201).json({ message: 'User registered successfully' });
+    res.status(201).json({status: 'success', message: 'User registered successfully' });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Server error' });
@@ -41,7 +41,7 @@ const login = async (req, res) => {
     }
     const token = jwt.sign({ id: user._id }, secret_key);
 
-    res.status(200).json({ token });
+    res.status(200).json({status: 'success', token });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Server error' });

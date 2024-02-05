@@ -1,7 +1,11 @@
-const  express=require("express");
-const router =express.Router();
+const  Router=require("express");
+const router =Router();
+const {createurl,Shortid,dashboard,deleteUrlData} = require('../controller/Url_shotController');
 
-
+router.post('/', createurl);
+router.get('/dashboard',dashboard)
+router.delete('/deleteUrl',deleteUrlData)
+router.get('/:shortURL', Shortid);
 
 router.post('/test2',async (req,res)=>{
     try {
