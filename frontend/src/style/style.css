@@ -1,0 +1,271 @@
+/* Navbar css */
+
+.navbar {
+    background-color: #21212168 ;
+    color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 15px 0px;
+}
+.navbar a{
+  color: rgba(240, 248, 255, 0);
+}
+
+.navbarwrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+
+
+.navbarwrapper div img {
+    width: 120px;
+}
+
+.navbarwrapper div .button2 {
+    margin-left: 10px;
+    background-color: #4f95ffc2;
+    color: white;
+    padding: 9px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbarwrapper div .button1 {
+    margin-left: 10px;
+    background-color: #ffffff00;
+    border: solid 1px rgb(255, 255, 255);
+    color: white;
+    padding: 8px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbarwrapper div .button2:hover {
+    background-color: #234db6;
+}
+
+.navbarwrapper div .logout img {
+    width: 13px;
+    margin-left: 8px;
+}
+
+.navbarwrapper div .logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+.navbarwrapper div .logout a{
+    text-decoration: none;
+    color: white;
+}
+
+/* homepage css */
+
+.homepage {
+    background-color: #212121;
+    color: white;
+    margin: auto;
+    /* padding-top: 10%; */
+    height: 100vh;
+    background-image: url('../assets//img//home_bg.webp');
+    /* Change the path to your image file */
+    background-size: cover;
+    /* Adjust as needed */
+    background-position: center;
+    /* Adjust as needed */
+    background-repeat: no-repeat;
+    /* Adjust as needed */
+    /* Add padding to ensure content is visible */
+    text-align: center;
+    /* Center text content within the form container */
+}
+
+.home_wrapper {
+    padding-top: 13%;
+}
+
+.formcontainerdata {
+    margin: auto;
+    display: inline-flex;
+}
+
+.homepage h1 {
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+    margin: 0px;
+}
+
+.homepage h1 span {
+    color: #4f95ffc2;
+}
+
+.homepage p {
+    font-size: 15px;
+}
+
+.formcontainerdata input {
+    margin: 0px;
+    width: 400px;
+    font-size: 18px;
+    border: solid 1px #7F7F7F;
+    border-radius: 4px;
+    height: 50px;
+    background: linear-gradient(162deg, rgba(27, 27, 27, 0.579) 0%, rgba(0, 0, 0, 0.4318977591036415) 100%);
+    color: rgb(187, 186, 186);
+}
+
+.formcontainerdata label {
+  margin: 10px 0px;
+}
+
+.formcontainerdata div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+    margin: auto;
+}
+
+.formcontainerdata button {
+    margin-left: 20px;
+    background-color: #4f95ffc2;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: end;
+}
+
+.ad_para {
+    padding-top: 180px;
+    letter-spacing: 1.3px;
+    color: #c1c1c166;
+}
+
+/* form textarea,
+  form select {
+    background-color: #2e1010;
+  } */
+/* .formcontainer {
+ margin-right: 10px;
+  } */
+
+
+  /* login css */
+ .loginform,.signup{
+    caret-color: transparent;
+    display: flex;
+    color: white;
+    max-width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 7rem;
+    
+ }
+
+  .logsignimg img{
+    width: 550px;
+  }
+  .formwrp{
+    background-color: #ffffff2d;
+    padding: 20px;
+    border-radius: 7px;
+  }
+  .formwrp .form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .formwrp .form-group label{
+    margin-top: 15px;
+    color: white;
+  }
+  .formwrp .form-group input{
+    margin: 0px;
+    width: 400px;
+    font-size: 18px;
+    border: solid 1px #7F7F7F;
+    border-radius: 4px;
+    height: 35px;
+    background: linear-gradient(162deg, rgba(27, 27, 27, 0.579) 0%, rgba(0, 0, 0, 0.4318977591036415) 100%);
+    color: rgb(187, 186, 186);
+  }
+  .actionbutton button{
+    margin-top: 25px;
+    margin-right: 20px;
+    background-color: #4f95ffc2;
+    border: none;
+    color: white;
+    padding: 9px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .actionbutton .newuser{
+    color: white;
+  }
+  .loginicon img{
+    width: 30px;
+    margin: 10px 15px;
+  }
+
+  /* scdxcdcdscsc */
+
+
+.dasboardcard{
+  color: #ababab;
+  width: 90%;
+  margin: auto;
+  margin-top: 8rem;
+}
+.dasboardcard a{
+  color: #227bda88;
+}
+.titalname{
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+.shortcard{
+  background-color: #00000058;
+  border: solid 1px rgba(86, 86, 86, 0.525);
+  width: 400px;
+  border-radius: 8px;
+}
+.cardWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.url_cont div{
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+.url_cont div h4{
+  margin: 10px;
+  overflow-x: hidden;
+}
+.clicks_cont section,.clicks_cont{
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  gap: 10px;
+}
+.clicks_cont{
+  justify-content: space-between;
+  margin-right: 10px;
+}

@@ -18,13 +18,11 @@ const createurl = async (req, res) => {
             { $push: { url: { originalURL: originalURL, shortURL: Shortidurl } } },
         );
         if (newurl) {
-            // User found and URL updated
-            res.status(200).json({ status: 'success', message: 'URL added/updated for the user.' });
+            res.status(200).json({ status: 'success',shortURL: Shortidurl, message: 'URL added/updated for the user.' });
         } else {
-            // User not found, create new user document
-            const newUserDocument = new urlModel({ userEmail: email, url: [{ originalURL, Shortidurl }] });
+            const newUserDocument = new urlModel({ userEmail: email, url: [{ originalURL: originalURL, shortURL: Shortidurl }] });
             await newUserDocument.save();
-            res.status(201).json({ status: 'success', message: 'New user document created with URL.',ShortId: Shortidurl });
+            res.status(201).json({ status: 'success',shortURL: Shortidurl, message: 'New user document created with URL.' });
         }
     } catch (error) {
         console.error(error);
@@ -54,10 +52,11 @@ const Shortid = async (req, res) => {
 
 const dashboard =async (req,res)=>{
     try {
-        const userEmail = req.body.email;
+        const email = req.query.email;
         
-        const UserData = await urlModel.find({ userEmail: userEmail }).select('url');
+        const UserData = await urlModel.find({ userEmail: email }).select('url');
         res.status(200).json(UserData);
+        console.log(UserData)
     } catch (error) {
         res.status(500).json({ error: 'Internal Server Error' });
     }
