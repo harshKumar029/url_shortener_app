@@ -5,6 +5,7 @@ const logger = require("../logger/pino");
 const connect = async () => {
   // const mongodburl = config.get("mongodburl");
   const mongodburl = process.env.MONGODB_URL;
+  console.log(mongodburl)
 
   return await mongoose.connect(mongodburl)
     .then(() => {
