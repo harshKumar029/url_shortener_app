@@ -25,7 +25,7 @@ const createurl = async (req, res) => {
             res.status(201).json({ status: 'success',shortURL: Shortidurl, message: 'New user document created with URL.' });
         }
     } catch (error) {
-        console.error(error);
+        logger.error(error);
         res.status(500).json({ message: 'Server error' });
     }
 }
@@ -45,7 +45,7 @@ const Shortid = async (req, res) => {
 
         res.redirect(update.url.find(u => u.shortURL === shortURL).originalURL);
     } catch (error) {
-        console.error(error);
+        logger.error(error);
         res.status(500).json({ message: 'Server error' });
     }
 }
@@ -56,8 +56,8 @@ const dashboard =async (req,res)=>{
         
         const UserData = await urlModel.find({ userEmail: email }).select('url');
         res.status(200).json(UserData);
-        console.log(UserData)
     } catch (error) {
+        logger.error(error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 }
@@ -65,7 +65,6 @@ const dashboard =async (req,res)=>{
 const deleteUrlData = async (req, res) => {
     try {
         const { email, id } = req.body;
-        console.log("hello",email, id)
         if (!email || !id) {
             return res.status(400).json({ error: 'User email and URL ID are required' });
         }
@@ -79,7 +78,7 @@ const deleteUrlData = async (req, res) => {
         }
         res.status(200).json({ message: 'URL data deleted successfully'});
     } catch (error) {
-        console.error(error);
+        logger.error(error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 };

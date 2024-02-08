@@ -9,9 +9,9 @@ router.get('/:shortURL', Shortid);
 
 router.post('/test2',async (req,res)=>{
     try {
-        res.send({ message: 'Test API is working!' });
+        res.send({ message: 'API is working!' });
       } catch (error) {
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error: 'Server Error' });
       }
 })
 module.exports = router;
