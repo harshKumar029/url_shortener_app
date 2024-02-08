@@ -6,9 +6,10 @@ const userRoutes = require('./src/routes/user_router');
 const urlRoutes = require('./src/routes/url_shot_router'); 
 const urlModel = require('./src/model/url_model')
 const cors = require('cors');
+const port = process.env.PORT || 8011;
 
-const port = config.get("port");
-const host = config.get("host");
+// const port = config.get("port");
+
 
 const app=express();
 // Middleware for CORS
@@ -51,8 +52,12 @@ app.use('/api/url_shot', urlRoutes );
 app.get('/', (req, res) => {
     res.send('Hello, world!');
 });
-app.listen(port,host,()=>{
- logger.info(`server listen at http//${host}:${port}`);
+// app.listen(port,host,()=>{
+//  logger.info(`server listen at http//${host}:${port}`);
 
- connect();
+//  connect();
+// })
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+    connect();
 })
