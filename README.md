@@ -4,6 +4,8 @@ This is a simple URL shortener application built using React for the frontend an
 
 the backend.It is a MERN app.
 
+![Image Alt Text](./frontend//src//assets//img/readmeimg.png)
+
 [Link to Video](https://urlshortnerapp-9g15.onrender.com/P5zpYKmsx)
 
 ## Overview
