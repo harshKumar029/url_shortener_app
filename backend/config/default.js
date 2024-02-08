@@ -1,5 +1,5 @@
 require('dotenv').config();
-const mongodburl = process.env.mongodburl
+const mongodburl = process.env.MONGODB_URL
 // const port = process.env.port;
 // const host = process.env.host;
 const saltWorkFactorString = process.env.saltWorkFactor;
