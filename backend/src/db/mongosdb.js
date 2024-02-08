@@ -4,7 +4,7 @@ const logger = require("../logger/pino");
 
 const connect = async () => {
   // const mongodburl = config.get("mongodburl");
-  const mongodburl = process.env.MONGODB_URL;
+  const mongodburl = "mongodb+srv://fastfood:fastfood123@cluster0.cpbc4ky.mongodb.net/urlshortener?retryWrites=true&w=majority";
   console.log(mongodburl)
 
   return await mongoose.connect(mongodburl)
