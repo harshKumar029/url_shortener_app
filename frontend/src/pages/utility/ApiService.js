@@ -5,7 +5,6 @@ const urlshot_API = `${API_BASE_URL}/url_shot`;
 const USER_API_URL = `${API_BASE_URL}/auth`;
 
 
-// Function to log in a user
 export const loginUser = async (userData) => {
   try {
     const response = await axios.post(`${USER_API_URL}/login`, userData);
@@ -15,7 +14,6 @@ export const loginUser = async (userData) => {
   }
 };
 
-// Function to register a new user
 export const registerUser = async (userData) => {
   try {
     const response = await axios.post(`${USER_API_URL}/signup`, userData);
@@ -24,7 +22,6 @@ export const registerUser = async (userData) => {
     throw new Error(error.response.data.error);
   }
 };
-
 
 export const shortenUrl = async (urlData) => {
   try {
@@ -35,7 +32,6 @@ export const shortenUrl = async (urlData) => {
   }
 };
 
-// Function to retrieve user dashboard data
 export const getUserDashboard = async (email) => {
   try {
     const response = await axios.get(`${urlshot_API}/dashboard`,{
@@ -47,15 +43,12 @@ export const getUserDashboard = async (email) => {
   }
 };
 
-// Function to delete URL data
-export const deleteUrlData = async (email, id) => {
+export const deleteUrlData = async (data) => {
   try {
-    const response = await axios.delete(urlshot_API, { data: { email, id } });
+    const response = await axios.delete(`${urlshot_API}/deleteUrl`, { data: data });
     return response.data;
   } catch (error) {
     throw new Error(error.response.data.error);
   }
 };
-
-// Add more API functions as needed
 

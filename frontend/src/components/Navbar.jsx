@@ -19,10 +19,7 @@ const Navbar = () => {
                     <div className='logo'>
                     <Link to='/'><img src={logo} alt='' /></Link>
                     </div>
-                    {(localStorage.getItem("Token")) ? (
-                    <div>
-                        <p>Hello ! {localStorage.getItem("name")}</p>
-                    </div>):''}
+                    {(localStorage.getItem("Token")) ? (<p className='userdetail'>Hello ! {localStorage.getItem("name")}</p>):''}
                     <div>
                         {(!localStorage.getItem("Token")) ? (
                             <div>
