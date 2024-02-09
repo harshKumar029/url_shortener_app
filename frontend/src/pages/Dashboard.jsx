@@ -52,7 +52,7 @@ const deleteData = async (Id) => {
                 </div>
                 <div>
                   <h4>Short Url:</h4>
-                  <p><a href={`https://urlshortnerapp-9g15.onrender.com/${urlItem.shortURL}`}>{`https://urlshortnerapp-9g15.onrender.com/${urlItem.shortURL}`}</a></p>
+                  <p><a href={`https://x-agc4.onrender.com/${urlItem.shortURL}`}>{`https://x-agc4.onrender.com/${urlItem.shortURL}`}</a></p>
                 </div>
               </div>
               <div className='clicks_cont'>
