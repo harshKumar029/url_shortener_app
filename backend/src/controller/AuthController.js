@@ -3,7 +3,8 @@ const jwt = require('jsonwebtoken');
 const User = require('../model/User_model');
 const config = require('config');
 const logger = require('../logger/pino');
-const secret_key = config.get("secret_key");
+// const secret_key = config.get("secret_key");
+const secret_key = "ebbgtrbtrnbbywhbfbtrbyrsbts"
 
 const signup = async (req, res) => {
   try {
