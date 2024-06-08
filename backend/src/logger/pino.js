@@ -1,10 +1,24 @@
+// const pino = require("pino");
+
+// const logger = pino({
+//     transport:{
+//         target: "pino-pretty",
+//         options:{
+//             translateTime: "SYS:dd-mm-yyyy HH:MM:ss",
+//             IGNORE:"paid,hostname",
+//         }
+//     }
+//   });
+
+//   module.exports = logger;
+
+
 const pino = require("pino");
+const pinoPretty = require("pino-pretty");
 
 const logger = pino({
-    prettyPrint: {
-        translateTime: "SYS:dd-mm-yyyy HH:MM:ss",
-        ignore: "paid,hostname" // Excluding specific fields from the logs
-    }
+    prettifier: pinoPretty, // Use pino-pretty for formatting logs in development
+    level: process.env.NODE_ENV === 'production' ? 'info' : 'debug' // Set log level based on environment
 });
 
 module.exports = logger;
