@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
   "scripts": {
-    "start": "nodemon --config nodemon.json index.js",
+    "start": "node index.js", 
+    "dev": "nodemon --config nodemon.json index.js",
     "build": "echo \"No build steps required\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
