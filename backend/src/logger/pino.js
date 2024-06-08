@@ -1,13 +1,10 @@
 const pino = require("pino");
 
 const logger = pino({
-    transport:{
-        target: "pino-pretty",
-        options:{
-            translateTime: "SYS:dd-mm-yyyy HH:MM:ss",
-            IGNORE:"paid,hostname",
-        }
+    prettyPrint: {
+        translateTime: "SYS:dd-mm-yyyy HH:MM:ss",
+        ignore: "paid,hostname" // Excluding specific fields from the logs
     }
-  });
+});
 
-  module.exports = logger;
+module.exports = logger;
