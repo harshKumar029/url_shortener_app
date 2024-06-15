@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/login&signup/Login';
 import Signup from './pages/login&signup/Signup';
+import Insides from './components/Insides';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
            <Route path='/dashboard' element={<Dashboard/>}/>
            <Route path="/login" element={<Login />} />
            <Route path="/createuser" element={<Signup />} />
+           <Route path="/insights" element={<Insides />} />
       </Routes>
     </Router>
   );

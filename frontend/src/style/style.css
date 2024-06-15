@@ -399,3 +399,52 @@
   justify-content: space-between;
   margin-right: 10px;
 }
+
+/* insides css */
+
+.insights-container {
+  padding-top: 8%;
+  height: 18rem;
+  /* overflow-y: scroll; */
+}
+.insights-heading {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 2.8rem;
+}
+
+.insights-table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.insights-table-head {
+  background-color: #0A1525;
+  position: sticky;
+  top: 0;
+  color: white;
+}
+
+.insights-table-head-row {
+  background-color: #0A1525;
+}
+
+.insights-table-head-cell {
+  padding: 0.5rem 1.75rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.insights-table-row {
+  background-color: #1A1A2E;
+}
+
+.insights-table-cell {
+  font-size: 15px;
+  color: #BBD3FF;
+  font-weight: 300;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
