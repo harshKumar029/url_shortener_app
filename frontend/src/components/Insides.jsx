@@ -2,8 +2,8 @@ import React from 'react'
 import { useLocation } from 'react-router-dom';
 
 const Insides = () => {
-    const location = useLocation();
-    const { urlItem } = location.state;
+  const location = useLocation();
+  const { urlItem } = location.state;
   return (
     <div className="insights-container">
 
@@ -26,15 +26,15 @@ const Insides = () => {
           {urlItem.pastAnalytics.map((item, index) => (
             <tr key={index} className="insights-table-row">
               <td className="insights-table-cell">{new Date(item.timestamp).toLocaleString()}</td>
-              <td className="insights-table-cell">{item.ip}</td>
-              <td className="insights-table-cell">{item.location.city}</td>
-              <td className="insights-table-cell">{item.location.region}</td>
-              <td className="insights-table-cell">{item.location.country_name}</td>
-              <td className="insights-table-cell">{item.device.browser}</td>
-              <td className="insights-table-cell">{item.device.os}</td>
-              <td className="insights-table-cell">{item.device.device}</td>
+              <td className="insights-table-cell">{item.ip || 'N/A'}</td>
+              <td className="insights-table-cell">{item.location?.city || 'N/A'}</td>
+              <td className="insights-table-cell">{item.location?.region || 'N/A'}</td>
+              <td className="insights-table-cell">{item.location?.country_name || 'N/A'}</td>
+              <td className="insights-table-cell">{item.device?.browser || 'N/A'}</td>
+              <td className="insights-table-cell">{item.device?.os || 'N/A'}</td>
+              <td className="insights-table-cell">{item.device?.device || 'N/A'}</td>
             </tr>
-          ))}
+          )).reverse()}
         </tbody>
       </table>
       {console.log(urlItem)}
