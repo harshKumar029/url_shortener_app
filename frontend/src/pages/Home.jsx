@@ -18,6 +18,7 @@ const Home = () => {
       }
     };
     <div>
+      
     <input type="text" placeholder="Enter URL" value={originalURL} onChange={(e) => setOriginalURL(e.target.value)} />
     <button onClick={handleShortenURL}>Shorten URL</button>
   </div>
