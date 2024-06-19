@@ -77,14 +77,14 @@ const cors = require('cors');
 const port = process.env.PORT || 8011;
 
 const app = express();
-
+// https://linked-mu.vercel.app
 // Middleware for CORS
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // https://x-agc4.onrender.com
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://linked-mu.vercel.app");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
