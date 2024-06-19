@@ -82,21 +82,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// https://x-agc4.onrender.com
-// app.use((req, res, next) => {
-//     res.setHeader("Access-Control-Allow-Origin", "*");
-//     res.setHeader(
-//         "Access-Control-Allow-Headers",
-//         "Origin, X-Requested-With, Content-Type, Accept"
-//     );
-//     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-//     next();
-// });
-app.use(cors({
-    origin: '*', // Allow all origins
-    methods: 'GET, POST, PUT, DELETE',
-    allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept'
-}));
+https://x-agc4.onrender.com
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    next();
+});
 
 app.get('/:shortURL', async (req, res) => {
     const shortURL = req.params.shortURL;
