@@ -83,27 +83,27 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // https://x-agc4.onrender.com
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://linked-mu.vercel.app");
-    res.setHeader(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );+
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-    next();
-});
-// const allowedOrigins = ['http://localhost:3000', 'https://linked-mu.vercel.app'];
-
-// // Middleware for CORS1
 // app.use((req, res, next) => {
-//     const origin = req.headers.origin;
-//     if (allowedOrigins.includes(origin)) {
-//         res.setHeader('Access-Control-Allow-Origin', origin);
-//     }
-//     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+//     res.setHeader("Access-Control-Allow-Origin", "https://linked-mu.vercel.app");
+//     res.setHeader(
+//         "Access-Control-Allow-Headers",
+//         "Origin, X-Requested-With, Content-Type, Accept"
+//     );+
+//     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
 //     next();
 // });
+const allowedOrigins = ['http://localhost:3000', 'https://linked-mu.vercel.app'];
+
+// Middleware for CORS1
+app.use((req, res, next) => {
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    next();
+});
 
 app.get('/:shortURL', async (req, res) => {
     const shortURL = req.params.shortURL;
