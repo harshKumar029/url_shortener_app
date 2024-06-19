@@ -64,7 +64,7 @@
 // })
 
 const express = require('express');
-const config = require("config");
+// const config = require("config");
 const logger = require('./src/logger/pino');
 const connect = require('./src/db/mongosdb'); 
 const userRoutes = require('./src/routes/user_router'); 

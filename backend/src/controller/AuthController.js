@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../model/User_model');
-const config = require('config');
+// const config = require('config');
 const logger = require('../logger/pino');
 // const secret_key = config.get("secret_key");
 const secret_key = "ebbgtrbtrnbbywhbfbtrbyrsbts"
@@ -13,7 +13,8 @@ const signup = async (req, res) => {
     if (existingUser) {
       return res.status(400).json({ message: 'User already exists' });
     }
-    const hashedPassword = await bcrypt.hash(password,config.get('saltWorkFactor'));
+    // const hashedPassword = await bcrypt.hash(password,config.get('saltWorkFactor'));
+    const hashedPassword = await bcrypt.hash(password, 10);
 
     // Creating new user
     const newUser = new User({ name, email, password: hashedPassword });
