@@ -13,6 +13,7 @@ module.exports = {
     // host,
     saltWorkFactor,
     secret_key,
+    // nodeEnv: process.env.NODE_ENV || 'development'production
 };
 
 // require('dotenv').config();
