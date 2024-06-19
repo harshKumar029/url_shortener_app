@@ -94,7 +94,7 @@ app.use(express.urlencoded({ extended: false }));
 // });
 const allowedOrigins = ['http://localhost:3000', 'https://linked-mu.vercel.app'];
 
-// Middleware for CORS
+// Middleware for CORS1
 app.use((req, res, next) => {
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
