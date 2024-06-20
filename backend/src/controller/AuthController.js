@@ -42,6 +42,7 @@ const signup = async (req, res) => {
 
     // Hash the password
     const hashStart = Date.now();
+    res.status(201).json({ status: 'success', message: 'User registered successfully' ,abc: hashStart});
     const hashedPassword = await bcrypt.hash(password, 10);
     res.status(201).json({ status: 'success', message: 'User registered successfully' ,abc: hashStart,caa: hashedPassword });
     logger.info(`Password hashing took ${Date.now() - hashStart} ms`);
