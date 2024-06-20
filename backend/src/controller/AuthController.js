@@ -30,14 +30,14 @@ const secret_key = "ebbgtrbtrnbbywhbfbtrbyrsbts"
 const signup = async (req, res) => {
   try {
     const { name, email, password } = req.body;
-    res.status(201).json({ status: 'success', message: 'User registered successfully' });
 
     logger.info(`Signup request received for email: ${email}`);
+    res.status(201).json({ status: 'success', message: 'User registered successfully' });
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      logger.warn(`User already exists for email: ${email}`);
+      // logger.warn(`User already exists for email: ${email}`);
       return res.status(400).json({ message: 'User already exists' });
     }
 
