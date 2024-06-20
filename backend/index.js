@@ -74,7 +74,7 @@ const requestIp = require('request-ip');
 const useragent = require('useragent');
 const axios = require('axios');
 const cors = require('cors');
-const port = process.env.PORT || 8011;
+const port = process.env.PORT || 80;
 
 const app = express();
 // https://linked-mu.vercel.app
