@@ -39,11 +39,11 @@ const signup = async (req, res) => {
       // logger.warn(`User already exists for email: ${email}`);
       return res.status(400).json({ message: 'User already exists' });
     }
-    res.status(201).json({ status: 'success', message: 'User registered successfully' });
 
     // Hash the password
     const hashStart = Date.now();
     const hashedPassword = await bcrypt.hash(password, 10);
+    res.status(201).json({ status: 'success', message: 'User registered successfully' ,abc: hashStart,caa: hashedPassword });
     logger.info(`Password hashing took ${Date.now() - hashStart} ms`);
 
     // Creating new user
