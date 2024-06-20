@@ -9,8 +9,8 @@ const secret_key=process.env.secret_key;
 
 module.exports = {
     mongodburl,
-    // port,
-    // host,
+    port,
+    host,
     saltWorkFactor,
     secret_key,
     // nodeEnv: process.env.NODE_ENV || 'development'
