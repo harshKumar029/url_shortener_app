@@ -30,12 +30,12 @@ const secret_key = "ebbgtrbtrnbbywhbfbtrbyrsbts"
 const signup = async (req, res) => {
   try {
     const { name, email, password } = req.body;
+    res.status(201).json({ status: 'success', message: 'User registered successfully' });
 
     logger.info(`Signup request received for email: ${email}`);
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });
-    logger.info("User already exists for email:",existingUser);
     if (existingUser) {
       logger.warn(`User already exists for email: ${email}`);
       return res.status(400).json({ message: 'User already exists' });
@@ -43,9 +43,7 @@ const signup = async (req, res) => {
 
     // Hash the password
     const hashStart = Date.now();
-    logger.info("hashStart cc:",hashStart);
     const hashedPassword = await bcrypt.hash(password, 10);
-    logger.info("hashedPassword cc:",hashedPassword);
     logger.info(`Password hashing took ${Date.now() - hashStart} ms`);
 
     // Creating new user
