@@ -92,7 +92,7 @@ app.use(express.urlencoded({ extended: false }));
 //     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
 //     next();
 // });
-const allowedOrigins = ['http://localhost:3000', 'https://linked-mu.vercel.app'];
+const allowedOrigins = [ 'https://linked-mu.vercel.app'];
 
 // Middleware for CORS1
 app.use((req, res, next) => {
