@@ -55,7 +55,7 @@ const Dashboard = () => {
                 </div>
                 <div>
                   <h4>Short Url:</h4>
-                  <p><a href={`https://x-agc4.onrender.com/${urlItem.shortURL}`}>{`https://x-agc4.onrender.com/${urlItem.shortURL}`}</a></p>
+                  <p><a href={`http://65.1.81.134:5000/${urlItem.shortURL}`}>{`http://65.1.81.134:5000/${urlItem.shortURL}`}</a></p>
                 </div>
               </div>
               <div className='clicks_cont'>

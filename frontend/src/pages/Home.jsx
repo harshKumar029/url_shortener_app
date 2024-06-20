@@ -11,7 +11,7 @@ const Home = () => {
         if(email){
         const response = await shortenUrl({ email:email, originalURL:originalURL });
         console.log(response);
-        setOriginalURL(`https://x-agc4.onrender.com/${response.shortURL}`);
+        setOriginalURL(`http://65.1.81.134:5000/${response.shortURL}`);
         }else{alert("Create your account")}
       } catch (error) {
         console.error(error.message); 
