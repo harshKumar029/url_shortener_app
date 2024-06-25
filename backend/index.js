@@ -115,13 +115,14 @@ app.get('/:shortURL', async (req, res) => {
             req.headers['x-forwarded-for']?.split(',')[0] ||
             req.socket.remoteAddress;
 
+        const ipv4Address = clientIp.includes('::ffff:') ? clientIp.split('::ffff:')[1] : clientIp;
         logger.info(`Client IP: ${clientIp}`);
 
         // Get geo-location data based on the client IP
         let geoLocationData = {};
         if (clientIp && clientIp !== '::1') {  // Skip local IP
             try {
-                const geoLocationResponse = await axios.get(`https://ipapi.co/${clientIp}/json/`);
+                const geoLocationResponse = await axios.get(`https://ipapi.co/${ipv4Address}/json/`);
                 geoLocationData = geoLocationResponse.data;
                 logger.info(`Geo-location data: ${JSON.stringify(geoLocationData)}`);
             } catch (geoError) {
