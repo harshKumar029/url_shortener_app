@@ -55,7 +55,7 @@ const Dashboard = () => {
                 </div>
                 <div>
                   <h4>Short Url:</h4>
-                  <p><a href={`http://65.1.81.134:5000/${urlItem.shortURL}`}>{`http://65.1.81.134:5000/${urlItem.shortURL}`}</a></p>
+                  <p><a href={`https://shortyfy.work.gd/${urlItem.shortURL}`}>{`https://shortyfy.work.gd/${urlItem.shortURL}`}</a></p>
                 </div>
               </div>
               <div className='clicks_cont'>
