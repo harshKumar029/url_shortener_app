@@ -9,7 +9,7 @@ const secret_key=process.env.secret_key;
 
 module.exports = {
     mongodburl,
-    port,
+   port,
     host,
     saltWorkFactor,
     secret_key,

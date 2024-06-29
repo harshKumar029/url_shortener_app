@@ -69,7 +69,7 @@ const Dashboard = () => {
                 >
                   View insights
                   <svg style={{ width: '20px' }} viewBox="0 0 384 184" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25 158.333L101.43 81.9033C114.447 68.8867 135.553 68.8867 148.57 81.9033L201.43 134.763C214.447 147.78 235.553 147.78 248.57 134.763L358.333 25M358.333 25V108.333M358.333 25H275" stroke="#4eaf4e" stroke-width="50" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M25 158.333L101.43 81.9033C114.447 68.8867 135.553 68.8867 148.57 81.9033L201.43 134.763C214.447 147.78 235.553 147.78 248.57 134.763L358.333 25M358.333 25V108.333M358.333 25H275" stroke="#4eaf4e" strokeWidth="50" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
                 <img
