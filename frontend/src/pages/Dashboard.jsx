@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { getUserDashboard, deleteUrlData } from './utility/ApiService';
 import deleteimg from '../assets/icon/delete.svg';
 import { useNavigate } from 'react-router-dom';
+import MapComponent from '../components/MapComponent';
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
@@ -42,6 +43,7 @@ const Dashboard = () => {
 
   return (
     <div className='dasboardcard'>
+      <MapComponent/>
       <h1 className='titalname'>Your history</h1>
       {userData && userData.url && (
         <div className='cardWrapper'>
@@ -55,7 +57,7 @@ const Dashboard = () => {
                 </div>
                 <div>
                   <h4>Short Url:</h4>
-                  <p><a href={`https://shortyfy.work.gd/${urlItem.shortURL}`}>{`https://shortyfy.work.gd/${urlItem.shortURL}`}</a></p>
+                  <p><a href={`http://localhost:5000/${urlItem.shortURL}`}>{`http://localhost:5000/${urlItem.shortURL}`}</a></p>
                 </div>
               </div>
               <div className='clicks_cont'>

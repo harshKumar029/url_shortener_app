@@ -11,7 +11,7 @@ const Home = () => {
         if(email){
         const response = await shortenUrl({ email:email, originalURL:originalURL });
         console.log(response);
-        setOriginalURL(`https://shortyfy.work.gd/${response.shortURL}`);
+        setOriginalURL(`http://localhost:5000/${response.shortURL}`);
         }else{alert("Create your account")}
       } catch (error) {
         console.error(error.message); 
