@@ -43,7 +43,7 @@ const Dashboard = () => {
 
   return (
     <div className='dasboardcard'>
-      <MapComponent/>
+      {/* <MapComponent/> */}
       <h1 className='titalname'>Your history</h1>
       {userData && userData.url && (
         <div className='cardWrapper'>
@@ -57,7 +57,8 @@ const Dashboard = () => {
                 </div>
                 <div>
                   <h4>Short Url:</h4>
-                  <p><a href={`http://localhost:5000/${urlItem.shortURL}`}>{`http://localhost:5000/${urlItem.shortURL}`}</a></p>
+                  {/* http://localhost:5000/ */}
+                  <p><a href={`http://65.1.81.134:5000/${urlItem.shortURL}`}>{`http://65.1.81.134:5000/${urlItem.shortURL}`}</a></p>
                 </div>
               </div>
               <div className='clicks_cont'>
