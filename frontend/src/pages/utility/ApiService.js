@@ -1,6 +1,6 @@
 import axios from 'axios';
-
-const API_BASE_URL = 'http://65.1.81.134:5000/api';
+// https://shortyfy.work.gd/
+const API_BASE_URL = 'https://shortyfy.work.gd/api';
 const urlshot_API = `${API_BASE_URL}/url_shot`;
 const USER_API_URL = `${API_BASE_URL}/auth`;
 
