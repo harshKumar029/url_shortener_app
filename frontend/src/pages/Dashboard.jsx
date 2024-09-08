@@ -58,7 +58,7 @@ const Dashboard = () => {
                 <div>
                   <h4>Short Url:</h4>
                   {/* http://localhost:5000/ */}
-                  <p><a href={`http://65.1.81.134:5000/${urlItem.shortURL}`}>{`http://65.1.81.134:5000/${urlItem.shortURL}`}</a></p>
+                  <p><a href={`http://65.1.81.134:5000/${urlItem.shortURL}`} target="_blank">{`http://65.1.81.134:5000/${urlItem.shortURL}`}</a></p>
                 </div>
               </div>
               <div className='clicks_cont'>
