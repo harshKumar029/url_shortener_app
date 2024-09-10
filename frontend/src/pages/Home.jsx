@@ -14,7 +14,7 @@ const Home = () => {
         setOriginalURL(`http://65.1.81.134:5000/${response.shortURL}`);
         }else{alert("Create your account")}
       } catch (error) {
-        console.error(error.message); 
+        console.error(error.message ); 
       }
     };
     <div>

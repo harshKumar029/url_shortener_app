@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 // https://shortyfy.work.gd/
 const API_BASE_URL = 'https://shortyfy.work.gd/api';
 const urlshot_API = `${API_BASE_URL}/url_shot`;
