@@ -251,6 +251,35 @@
 
 /* login css */
 
+
+/* LoadingSpinner.css */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.loading-spinner {
+  margin: 0px 10px;
+  width: 15px;  /* Width of the spinner */
+  height: 15px; /* Height of the spinner */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Light grey border */
+  border-top: 2px solid #e3e3e3; /* Blue border */
+  border-radius: 50%; /* Makes the shape circular */
+  animation: spin 1s linear infinite; /* Animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start position */
+  }
+  100% {
+    transform: rotate(360deg); /* End position, full rotation */
+  }
+}
+
+
 .loginform,
 .signup {
   caret-color: transparent;

@@ -10,10 +10,12 @@ import loginvector from '../../assets/icon/signup.svg'
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [issubmit, setissubmit] = useState(false)
     let navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        setissubmit(true);
         try {
             const response = await loginUser({ email: email, password: password });
             console.log("resposnse data ", response)
@@ -28,11 +30,14 @@ const Login = () => {
                 navigate("/");
             } else {
                 console.log('Login unsuccessful:', response.message);
-                alert("Enter valid credentials");
+                alert("Enter valid credentials",response.message);
             }
+            setissubmit(false);
+
         } catch (error) {
             console.error(error.message);
-            alert("Enter valid credentials");
+            alert(error.message);
+            setissubmit(false);
         }
     };
     return (
@@ -53,7 +58,17 @@ const Login = () => {
                         <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password" required />
                     </div>
                     <div className='actionbutton'>
-                        <button type="submit">Log In</button>
+                        <button>
+                            {issubmit ? (
+                                <div className="loading-spinner">
+
+                                </div>
+
+                            ) : (
+                                `Log In`
+                            )}
+                        </button>
+                        {/* <button type="submit">Log In</button> */}
                         <Link to='/createuser' className="newuser" >i'm a new user.</Link>
                     </div>
                     <hr />
