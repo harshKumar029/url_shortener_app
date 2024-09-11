@@ -36,7 +36,7 @@ const Login = () => {
 
         } catch (error) {
             console.error(error.message);
-            alert(error.message);
+            alert("There is some problem. Please try again later.",error.message);
             setissubmit(false);
         }
     };

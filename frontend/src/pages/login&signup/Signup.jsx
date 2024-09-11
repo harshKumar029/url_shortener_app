@@ -26,12 +26,13 @@ const Signup = () => {
                 navigate("/login")
             } else {
                 console.log('Signup unsuccessful:', response.message);
-                alert("Enter valid credentials")
+                alert("There is some problem. Please try again later.");
             }
             setissubmit(false);
 
         } catch (error) {
             console.error(error.message);
+            alert("There is some problem. Please try again later.",error.message);
             setissubmit(false);
         }
     };
